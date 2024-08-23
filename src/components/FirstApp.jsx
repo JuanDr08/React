@@ -72,3 +72,25 @@ export const FirstApp = ({title, number}) => { // Los ' parametros ' (en realida
 
     )
 }
+
+/*
+    Si quisieramos definir que los props tuvieran una estructura rigida, es decir, que algunos props fueran requeridos, que tuvieran cierto tipo de dato esto lo podriamos hacer mediante los propTypes, como estamos usando vite
+    nos tocaria instalar la dependencia con npm i prop-types
+
+    Una vez instalada podremos definir la estructura de nuestros prototipos de la siguiente manera
+    import PropTypes from 'prop-types'; importamos el propType
+    FirstApp.propTypes = { // Asi se define
+        title: PropTypes.string.isRequired,  // Especificamos que el prop title será un string y es requerido al momento de llamar el functional component
+        number: PropTypes.number  // Especificamos que el prop number será un string y no es requerido al momento de llamar el functional component
+    }
+
+    A su vez, tambien para evitar definir los valores por defecto de un prop en el encabezado del functional component, a mejor definirlos de la siguiente manera
+
+    FirstApp.defaultProps = {
+        title: "Titulo por defecto",  // Definimos el titulo que tomará el prop por defecto si llegado el caso no se le llega a pasar titulo en el prop
+        number: 123
+        name: "Nombre por defecto"  // Si observamos bien, name es un prop que aun no esta definido en el encabezado del componente, pero definir los defaults de esta forma nos permite establecer valores por defecto para cuantos 
+        // props querramos, y posteriormente podriamos acceder a ellos desestructurandolos en el encabezado y asi
+        // Hay que tener en cuenta que los defaults deben coincidir con los propTypes para que no salte error
+    }
+*/
