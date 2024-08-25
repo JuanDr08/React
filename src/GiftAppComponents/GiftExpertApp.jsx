@@ -5,7 +5,7 @@ import { GifGrid } from "./GifGrid"
 
 export const GifExpertApp = () => {
     
-    const [ categories, setCategories ] = useState(['One puch', 'Dragon Ball']) // Declaramos un useState que contendra un arreglo, al cual le podremos ir agregando mas categorias
+    const [ categories, setCategories ] = useState(['One punch']) // Declaramos un useState que contendra un arreglo, al cual le podremos ir agregando mas categorias
     
     const onAddCategory = (arg) => { // Esta funcion se le pasará como prop al hijo para permitirle emitir datos a ella y desde el componente padre cambiar el estado
 

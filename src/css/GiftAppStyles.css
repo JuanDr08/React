@@ -5,6 +5,7 @@
   
   body {
     padding: 60px;
+    text-align: center;
   }
   
   input {
@@ -32,6 +33,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
   }
   
   .card {
@@ -42,22 +44,28 @@
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
-    height: 0%;  
     justify-content: center;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    overflow: hidden;
+    width: 250px;
+    height: 250px;
   }
   
   .card p {
     background-color: white;
-    flex: 1;
+    align-items: center;
     font-size: 1.5rem;
     margin-top: 5px;
     padding: 5px 20px 0px 20px;
-    text-align: center;
   }
   
   .card img {
-    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+    width: 100px;
+    height: 100px;
+    transition: .5s 0s all ease normal;
+  }
+
+  .card img:hover {
+    scale: 2;
+    border-radius: 0px;
   }
